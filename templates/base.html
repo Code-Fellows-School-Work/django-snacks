@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
     {% endcompress %}
 </head>
-<body>
-    <nav>
+<body class = "bg-slate-400">
+    <nav class="bg-gray-800 p-4 flex justify-center">
         <!-- this django naming convention allows the url link to be retrieved from urls.py -->
-        <a href ="{% url 'home' %}">Home</a>
-        <a href ="{% url 'about' %}">About</a>
+        <div class="text-white space-x-4">
+            <a href ="{% url 'home' %}" class="hover:text-gray-300">Home</a>
+            <a href ="{% url 'about' %}" class="hover:text-gray-300">About</a>
+        </div>
     </nav>
     {% block content %}
     child template goes here
